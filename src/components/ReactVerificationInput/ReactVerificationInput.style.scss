@@ -16,14 +16,37 @@ $brand-font-folder: '../../../fonts' !default;
     float: left;
     width: 44px !important;
     height: 48px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--theme-border-primary);
+    color: var(--button-primary-text);
+    background-color: var(--button-primary-background);
     box-sizing: border-box;
     border-radius: 8px;
     margin: 0px 8px;
     font-size: 26px;
     line-height: 48px;
-    &--selected {
+    &--selected:empty {
+      &:before {
+        font-family: 'CiscoSansTT Thin';
+        content: '|';
+        font-weight: 100;
+        font-size: 30px;
+        color: #2E3D48;
+        -webkit-animation: 1s blink step-end infinite;
+        -moz-animation: 1s blink step-end infinite;
+        -ms-animation: 1s blink step-end infinite;
+        -o-animation: 1s blink step-end infinite;
+        animation: 1s blink step-end infinite;
+      }
       background: rgba(0, 0, 0, 0.11);
     }
+  }
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: var(--button-primary-text);
   }
 }

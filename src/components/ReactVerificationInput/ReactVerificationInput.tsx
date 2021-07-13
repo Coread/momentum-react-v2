@@ -6,11 +6,12 @@ import './ReactVerificationInput.style.scss';
 import { Props } from './ReactVerificationInput.types';
 
 const ReactVerificationInput = (props: Props) => {
-  const {className} = props;
+  const {numDigits} = props;
 
   // Implementation goes here
   return (
     <VerificationInput
+      length={numDigits}
       onChange={(value) => {
         if (value.length === 6) {
           console.log('complete:', value)

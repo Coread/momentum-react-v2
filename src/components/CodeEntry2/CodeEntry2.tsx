@@ -12,6 +12,7 @@ const CodeEntry2 = (props: Props) => {
   // Implementation goes here
   return (
     <ReactCodeInput
+    className= 'react-code-input'
     inputStyle={{
         fontFamily: 'CiscoSansTT Regular',
         MozAppearance: 'textfield',
@@ -25,6 +26,7 @@ const CodeEntry2 = (props: Props) => {
         fontSize: '26px',
         boxSizing: 'border-box',
         textAlign: 'center',
+        borderWidth: '1px'
       }}
       pattern="[0-9]"
       type="number"

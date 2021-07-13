@@ -1,32 +1,43 @@
 import React from 'react';
 import { Story } from '@storybook/react';
+import { THEME_PROVIDER_CONSTANTS } from '../ThemeProvider';
 
 import ReactVerificationInput, { ReactVerificationInputProps } from './';
 
 import ThemeProvider from '../ThemeProvider';
+import { ThemeNames } from '../ThemeProvider/ThemeProvider.types';
 
 export default {
   title: 'Momentum UI/ReactVerificationInput',
   component: ReactVerificationInput,
   argTypes: {
-    propName: {
-      description: 'Description with what the prop does.',
-      options: ['Value 1', 'Value 2'],
-      control: { type: 'select' }, // change as needed
+    numDigits: {
+      description: 'Number of boxes',
+    },
+    theme: {
+      description: 'The name of the target theme to use.',
+      options: [...Object.values(THEME_PROVIDER_CONSTANTS.THEME_NAMES)],
+      control: { type: 'select' },
     },
   },
 };
 
-const Template: Story<ReactVerificationInputProps> = (args) => (
-  <ThemeProvider>
+interface StoryProps extends ReactVerificationInputProps {
+  theme: ThemeNames;
+}
+
+const Template: Story<StoryProps> = (args) => {
+  const {theme} = args;
+  return <ThemeProvider theme={theme}>
     <ReactVerificationInput {...args} />
   </ThemeProvider>
-);
+};
 
 const Story1 = Template.bind({});
 
 Story1.args = {
-  propName: 'Value 1',
+  theme: 'lightWebex',
+  numDigits: 6,
 };
 
 export { Story1 };
