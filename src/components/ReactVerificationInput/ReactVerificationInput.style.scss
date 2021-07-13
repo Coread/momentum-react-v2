@@ -1,0 +1,29 @@
+$brand-font-folder: '../../../fonts' !default;
+@font-face {
+  font-family: 'CiscoSansTT Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$brand-font-folder}/CiscoSansTTRegular.woff2') format('woff2'),
+    url('#{$brand-font-folder}/CiscoSansTTRegular.woff') format('woff');
+  font-display: fallback;
+}
+
+.container {
+  display: block !important;
+  .character {
+    font-family: 'CiscoSansTT Regular';
+    display: block;
+    float: left;
+    width: 44px !important;
+    height: 48px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin: 0px 8px;
+    font-size: 26px;
+    line-height: 48px;
+    &--selected {
+      background: rgba(0, 0, 0, 0.11);
+    }
+  }
+}
