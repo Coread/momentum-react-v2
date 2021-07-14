@@ -2,8 +2,8 @@ import React from 'react';
 import classnames from 'classnames';
 import VerificationInput from 'react-verification-input';
 
-import './ReactVerificationInput.style.scss';
-import { Props } from './ReactVerificationInput.types';
+import './CodeInput.style.scss';
+import { Props } from './CodeInput.types';
 
 const ReactVerificationInput = (props: Props) => {
   const {numDigits, onComplete} = props;

@@ -2,14 +2,14 @@ import React from 'react';
 import { Story } from '@storybook/react';
 import { THEME_PROVIDER_CONSTANTS } from '../ThemeProvider';
 
-import ReactVerificationInput, { ReactVerificationInputProps } from './';
+import CodeInput, {CodeInputProps } from './';
 
 import ThemeProvider from '../ThemeProvider';
 import { ThemeNames } from '../ThemeProvider/ThemeProvider.types';
 
 export default {
-  title: 'Momentum UI/ReactVerificationInput',
-  component: ReactVerificationInput,
+  title: 'Momentum UI/CodeInput',
+  component: CodeInput,
   argTypes: {
     numDigits: {
       description: 'Number of boxes',
@@ -22,7 +22,7 @@ export default {
   },
 };
 
-interface StoryProps extends ReactVerificationInputProps {
+interface StoryProps extends CodeInputProps {
   theme: ThemeNames;
 }
 
@@ -34,7 +34,7 @@ const Template: Story<StoryProps> = (args) => {
       padding: '2rem',
       backgroundColor: 'var(--theme-background-solid-primary-normal)'
     }}>
-      <ReactVerificationInput onComplete={(code) => {
+      <CodeInput onComplete={(code) => {
         alert(`code is ${code}`);
       }} {...args} />
     </div>

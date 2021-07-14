@@ -1,12 +1,12 @@
-import ReactVerificationInput from '.';
+import CodeInput from '.';
 import {mount} from 'enzyme';
 import React from 'react';
 
-describe('ReactVerificationInput', () => {
+describe('CodeInput', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
       
-      const container = mount(<ReactVerificationInput numDigits={6} />);
+      const container = mount(<CodeInput numDigits={6} />);
       
       expect(container).toMatchSnapshot();
     });
