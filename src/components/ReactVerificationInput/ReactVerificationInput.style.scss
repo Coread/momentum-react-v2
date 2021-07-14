@@ -17,21 +17,18 @@ $brand-font-folder: '../../../fonts' !default;
 //   }
 // }
 .container {
-  display: block !important;
   .character {
     font-family: 'CiscoSansTT Regular';
-    display: block;
-    float: left;
-    width: 44px !important;
-    height: 48px;
+    width: 2.75rem;
+    height: 3rem;
     border: 1px solid var(--code-input-border);
     color: var(--code-input-text);
     background-color: var(--code-input-background);
     box-sizing: border-box;
-    border-radius: 8px;
-    margin: 0px 8px;
-    font-size: 26px;
-    line-height: 48px;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 1.625rem;
+    line-height: 3rem;
     &:hover {
       background-color: var(--code-input-background-hovered);
     }
