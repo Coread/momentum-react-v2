@@ -25,7 +25,7 @@ $brand-font-folder: '../../../fonts' !default;
     width: 44px !important;
     height: 48px;
     border: 1px solid var(--code-input-border);
-    color: var(--code-input-text-color);
+    color: var(--code-input-text);
     background-color: var(--code-input-background);
     box-sizing: border-box;
     border-radius: 8px;
@@ -44,13 +44,7 @@ $brand-font-folder: '../../../fonts' !default;
       &:before {
         font-family: 'CiscoSansTT Thin';
         content: '|';
-        color: var(--code-input-text-color-active);
-        font-weight: 100;
-        font-size: 30px;
-        -webkit-animation: 1s blink step-end infinite;
-        -moz-animation: 1s blink step-end infinite;
-        -ms-animation: 1s blink step-end infinite;
-        -o-animation: 1s blink step-end infinite;
+        color: var(--code-input-text-active);
         animation: 1s blink step-end infinite;
       }
       background-color: var(--code-input-background-active);
@@ -64,6 +58,6 @@ $brand-font-folder: '../../../fonts' !default;
     color: transparent;
   }
   50% {
-    color: var(--code-input-text-color-active);
+    color: var(--code-input-text-active);
   }
 }
