@@ -34,7 +34,9 @@ const Template: Story<StoryProps> = (args) => {
       padding: '2rem',
       backgroundColor: 'var(--theme-background-solid-primary-normal)'
     }}>
-      <ReactVerificationInput {...args} />
+      <ReactVerificationInput onComplete={(code) => {
+        alert(`code is ${code}`);
+      }} {...args} />
     </div>
   </ThemeProvider>
 };

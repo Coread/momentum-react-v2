@@ -1,11 +1,14 @@
-import {ReactVerificationInput} from './';
+import ReactVerificationInput from '.';
 import {mount} from 'enzyme';
 import React from 'react';
 
 describe('ReactVerificationInput', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
-      /* ...snapshot test... */
+      
+      const container = mount(<ReactVerificationInput numDigits={6} />);
+      
+      expect(container).toMatchSnapshot();
     });
   });
 
