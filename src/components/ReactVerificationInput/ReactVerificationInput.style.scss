@@ -8,6 +8,14 @@ $brand-font-folder: '../../../fonts' !default;
   font-display: fallback;
 }
 
+
+// Add this for focus
+// input:focus-visible ~ .container .character {
+//   &--selected:empty {
+//     border-color: var(--code-input-border-focused);
+//     outline: none;
+//   }
+// }
 .container {
   display: block !important;
   .character {
@@ -16,28 +24,37 @@ $brand-font-folder: '../../../fonts' !default;
     float: left;
     width: 44px !important;
     height: 48px;
-    border: 1px solid var(--theme-border-primary);
-    color: var(--button-primary-text);
-    background-color: var(--button-primary-background);
+    border: 1px solid var(--code-input-border);
+    color: var(--code-input-text-color);
+    background-color: var(--code-input-background);
     box-sizing: border-box;
     border-radius: 8px;
     margin: 0px 8px;
     font-size: 26px;
     line-height: 48px;
+    &:hover {
+      background-color: var(--code-input-background-hovered);
+    }
+    &:active {
+      background-color: var(--code-input-background-active);
+      border-color: var(--code-input-border-active)
+    }
+
     &--selected:empty {
       &:before {
         font-family: 'CiscoSansTT Thin';
         content: '|';
+        color: var(--code-input-text-color-active);
         font-weight: 100;
         font-size: 30px;
-        color: #2E3D48;
         -webkit-animation: 1s blink step-end infinite;
         -moz-animation: 1s blink step-end infinite;
         -ms-animation: 1s blink step-end infinite;
         -o-animation: 1s blink step-end infinite;
         animation: 1s blink step-end infinite;
       }
-      background: rgba(0, 0, 0, 0.11);
+      background-color: var(--code-input-background-active);
+      border-color: var(--code-input-border-active)
     }
   }
 }
@@ -47,6 +64,6 @@ $brand-font-folder: '../../../fonts' !default;
     color: transparent;
   }
   50% {
-    color: var(--button-primary-text);
+    color: var(--code-input-text-color-active);
   }
 }

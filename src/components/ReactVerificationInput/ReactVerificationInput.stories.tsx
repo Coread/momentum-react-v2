@@ -29,7 +29,13 @@ interface StoryProps extends ReactVerificationInputProps {
 const Template: Story<StoryProps> = (args) => {
   const {theme} = args;
   return <ThemeProvider theme={theme}>
-    <ReactVerificationInput {...args} />
+    <div style={{
+      display: 'inline-block',
+      padding: '2rem',
+      backgroundColor: 'var(--theme-background-solid-primary-normal)'
+    }}>
+      <ReactVerificationInput {...args} />
+    </div>
   </ThemeProvider>
 };
 
